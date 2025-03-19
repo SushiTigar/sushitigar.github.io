@@ -14,7 +14,6 @@ object {outline: none;}
 var g_bHtml5Supported = true;
 </script>
 <!--[if lte IE 9]><script>g_bHtml5Supported = false;</script><![endif]-->
-
 <script type="text/javascript">
 
 // Detect min flash version
@@ -146,6 +145,17 @@ if (g_strScale == "show all")
 </head>
 
 <body style="height: 100%;" onunload="DoOnClose()" onbeforeunload="DoOnClose()">
+	<script>
+		window.RufflePlayer = window.RufflePlayer || {};
+		window.addEventListener("load", (event) => {
+			const ruffle = window.RufflePlayer.newest();
+			const player = ruffle.createPlayer();
+			const container = document.getElementById("container");
+			container.appendChild(player);
+			player.ruffle().load("story.swf");
+		});
+	</script>
+	<script src="ruffle/ruffle.js"></script>
 
 <script type="text/javascript">
 
