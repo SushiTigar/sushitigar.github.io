@@ -1,0 +1,107 @@
+---
+interface Props {
+  name: string;
+  title: string;
+  heroLines: string[];
+  linkedin?: string;
+}
+
+const { name, title, heroLines, linkedin } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    <h1 class="hero__name">{name}</h1>
+    <p class="hero__title">{title}</p>
+
+    <div class="hero__bio">
+      {heroLines.map((line) => (
+        <p>{line}</p>
+      ))}
+    </div>
+
+    <div class="hero__actions">
+      <a href="#projects" class="btn btn-primary">Check out my work! &darr;</a>
+      {linkedin && (
+        <a href={linkedin} class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("/images/banner.jpg") center / cover no-repeat;
+    color: #ffffff;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    padding: var(--space-2xl) var(--space-lg);
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero__name {
+    margin-bottom: var(--space-xs);
+    color: #ffffff;
+  }
+
+  .hero__title {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  .hero__bio {
+    max-width: 650px;
+    margin: 0 auto var(--space-xl);
+  }
+
+  .hero__bio p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+  }
+
+  .hero__actions .btn-primary {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+  }
+
+  .hero__actions .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  .hero__actions .btn-outline {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero__actions .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+</style>
