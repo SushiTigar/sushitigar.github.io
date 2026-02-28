@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects
+    .filter((p) => p.data.published)
+    .map((project) => ({
+      params: { slug: project.id },
+      props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, subtitle, detailImages, contributions, tools, tags } = project.data;
+---
+
+<BaseLayout title={`${title} — Sushiil Shettigar`}>
+  <section class="project-detail">
+    <div class="container">
+      <a href="/#projects" class="back-link">&larr; Back to Portfolio</a>
+
+      <header class="project-detail__header">
+        <h1>{title}</h1>
+        {subtitle && <p class="project-detail__subtitle">{subtitle}</p>}
+      </header>
+
+      <div class="project-detail__body">
+        <Content />
+      </div>
+
+      {detailImages.length > 0 && (
+        <div class="project-detail__gallery">
+          {detailImages.map((img) => (
+            <img src={img} alt={`${title} screenshot`} loading="lazy" class="project-detail__image" />
+          ))}
+        </div>
+      )}
+
+      {contributions && (
+        <div class="project-detail__section">
+          <h3>My Contributions</h3>
+          <p>{contributions}</p>
+        </div>
+      )}
+
+      {tools && (
+        <div class="project-detail__section">
+          <h3>Tools Used</h3>
+          <p>{tools}</p>
+        </div>
+      )}
+
+      {tags.length > 0 && (
+        <div class="project-detail__tags">
+          {tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      )}
+
+      <div class="project-detail__footer">
+        <a href="/#projects" class="btn btn-outline">&larr; Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .project-detail {
+    padding: var(--space-2xl) 0;
+  }
+
+  .project-detail .container {
+    max-width: 800px;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: var(--space-lg);
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  .project-detail__header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .project-detail__header h1 {
+    margin-bottom: var(--space-xs);
+  }
+
+  .project-detail__subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .project-detail__body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text);
+  }
+
+  .project-detail__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .project-detail__image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .project-detail__section {
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-detail__section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+  }
+
+  .project-detail__section p {
+    line-height: 1.7;
+    color: var(--color-text);
+  }
+
+  .project-detail__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .project-detail__footer {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

@@ -1,0 +1,16 @@
+{
+  "name": "sushiil-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Sushiil Shettigar's portfolio site — built with Astro, managed with Decap CMS",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "cms": "npx decap-server",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.17.1"
+  }
+}

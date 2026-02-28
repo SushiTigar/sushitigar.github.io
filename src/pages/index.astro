@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import { getCollection } from "astro:content";
+
+const settingsEntries = await getCollection("settings");
+const site = settingsEntries[0]?.data ?? {
+  name: "Sushiil Shettigar",
+  title: "Designer",
+  heroLines: [],
+  bio: "",
+  about: "",
+};
+
+const allProjects = await getCollection("projects");
+const projects = allProjects
+  .filter((p) => p.data.published)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title={`${site.name} — ${site.title}`}>
+  <Hero
+    name={site.name}
+    title={site.title}
+    heroLines={site.heroLines ?? []}
+    linkedin={site.linkedin}
+  />
+
+  <section id="projects">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p class="projects-note">
+        Most of the work I've produced for previous clients is under NDA.
+        The section below represents just a glance of my work.
+      </p>
+
+      <div class="project-grid">
+        {projects.map((project) => (
+          <ProjectCard
+            title={project.data.title}
+            description={project.data.description}
+            tags={project.data.tags}
+            thumbnail={project.data.thumbnail}
+            slug={project.id}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <About about={site.about} />
+
+  <Contact
+    email={site.email}
+    linkedin={site.linkedin}
+  />
+</BaseLayout>
+
+<style>
+  .projects-note {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+    max-width: 560px;
+  }
+</style>
