@@ -8,7 +8,7 @@ detailImages:
 contributions: "I was involved with staging, lighting, and recording audio during the video shoot. I was the sole editor during post-production."
 tools: "My creative team and I used a Canon 6D camera to record the video and a Zoom H4N to record the audio. I used Adobe Premiere to edit the video and Adobe Audition to edit the audio."
 tags: ["Video", "Motion Graphics", "Training"]
-order: 8
+order: 7
 published: true
 ---
 

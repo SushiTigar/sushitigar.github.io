@@ -8,7 +8,7 @@ detailImages:
 contributions: "I developed roughly 75% of this course on my own. I scripted, recorded, and produced voiceovers; animated graphics within Storyline; created graphics in Adobe Illustrator; wrote some JavaScript to produce math problems dynamically; and developed the course flow in Storyline."
 tools: "Articulate Storyline is the primary tool used to develop this course. I additionally used Adobe Illustrator, Audition, and Premiere to produce the graphics, audio, and video."
 tags: ["eLearning", "Retail", "Instructional Design"]
-order: 5
+order: 4
 published: true
 ---
 
