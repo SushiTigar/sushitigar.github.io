@@ -12,7 +12,7 @@ detailImages:
 contributions: "I designed and developed this workshop along with an Instructor. I created an initial outline and received approval from the client. Following that, I developed a comprehensive Facilitator's Guide, template HTML/CSS files, a packet of handout materials, and a set of Google Slides to run through the whole workshop. The instructor helped me with some of the scripting (i.e., what to say) in the slides and Facilitator's Guide."
 tools: "Google Docs and Google Slides were used to produce the written documentation and lecture slides. I used Adobe Illustrator to produce the print handouts and used Atom as my Text Editor to code the templates, which I then stored on GitHub."
 tags: ["eLearning", "Development", "Instructional Design"]
-order: 4
+order: 6
 published: true
 ---
 

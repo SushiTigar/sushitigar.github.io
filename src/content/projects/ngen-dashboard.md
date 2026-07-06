@@ -8,7 +8,7 @@ detailImages:
 contributions: "I was given a wireframe from a Graphic Designer and I translated it into a SharePoint website. I utilized JavaScript to pull the data from the Web Parts. I then used CSS to make them match the wireframe. Finally, I wrote a guide for end-users to be able to update every component using SharePoint's backend services."
 tools: "Notepad++ was my Text Editor and Microsoft SharePoint was the corporate platform that I worked with to create the site."
 tags: ["UX Design", "Dashboard", "Data Visualization"]
-order: 5
+order: 7
 published: true
 ---
 

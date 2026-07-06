@@ -8,7 +8,7 @@ detailImages:
 contributions: "I developed 100% of the eLearning courses and heavily modified code for the front-end website."
 tools: "Adobe Premiere and Adobe Captivate were used heavily for the courses; Atom was used to modify the website code."
 tags: ["eLearning", "Instructional Design", "Web"]
-order: 1
+order: 2
 published: true
 ---
 

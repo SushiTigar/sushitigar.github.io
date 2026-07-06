@@ -9,7 +9,7 @@ detailImages:
 contributions: "I created 100% of this course with consultation of legal and IT experts. The content is based on the best practices the FBI and other security agencies promote. I designed the course graphics and developed the eLearning."
 tools: "Piktochart and Articulate Rise were the primary tools used to develop this course. The icons were sourced from Piktochart but I created the layout, color, and design. I imported the finished graphics into Articulate Rise and customized it to make the course presentation seamlessly illustrated."
 tags: ["eLearning", "Compliance", "Instructional Design"]
-order: 2
+order: 4
 published: true
 ---
 
