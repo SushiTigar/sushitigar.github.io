@@ -1,15 +1,15 @@
 ---
 title: "Continuous Improvement Video"
 subtitle: "Interview Video"
-description: "Produced an instructional video explaining continuous improvement methodologies, combining motion graphics with clear narration."
+description: "I produced an instructional video that uses candid interviews and motion graphics to explain continuous improvement."
 thumbnail: "/images/pic07.jpg"
 detailImages:
   - "/images/portfolio/f.gif"
-contributions: "I was involved with staging, lighting, and recording audio during the video shoot. I was the sole editor during post-production."
+contributions: "I helped stage the shoot, set up the lighting, and record audio for the video. I then edited the whole thing myself in post-production, cutting the candid interviews into a story about how continuous improvement changed people's daily work."
 tools: "My creative team and I used a Canon 6D camera to record the video and a Zoom H4N to record the audio. I used Adobe Premiere to edit the video and Adobe Audition to edit the audio."
 tags: ["Video", "Motion Graphics", "Training"]
 order: 7
 published: true
 ---
 
-This video features several candid interviews with Nordstrom Employees discussing the benefits of Continuous Improvement strategies on their workflow. These interviews were shot over the course one full day. The video was featured at a large internal recognition meeting.
+I made this video to show the benefits of continuous improvement through candid interviews with Nordstrom employees about how the methods changed their daily work. We shot the interviews across a full day, and the finished video was shown at a large internal recognition meeting.

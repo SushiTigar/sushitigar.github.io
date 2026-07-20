@@ -2,17 +2,19 @@
 interface Props {
   name: string;
   title: string;
+  tagline?: string;
   heroLines: string[];
   linkedin?: string;
 }
 
-const { name, title, heroLines, linkedin } = Astro.props;
+const { name, title, tagline, heroLines, linkedin } = Astro.props;
 ---
 
 <section class="hero">
   <div class="container hero-inner">
     <h1 class="hero__name">{name}</h1>
     <p class="hero__title">{title}</p>
+    {tagline && <p class="hero__tagline">{tagline}</p>}
 
     <div class="hero__bio">
       {heroLines.map((line) => (
@@ -63,6 +65,16 @@ const { name, title, heroLines, linkedin } = Astro.props;
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     letter-spacing: 0.15em;
+  }
+
+  .hero__tagline {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: calc(-1 * var(--space-sm));
+    margin-bottom: var(--space-lg);
+    font-style: italic;
+    letter-spacing: 0.02em;
   }
 
   .hero__bio {

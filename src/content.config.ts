@@ -38,7 +38,6 @@ const settings = defineCollection({
     title: z.string(),
     tagline: z.string(),
     heroLines: z.array(z.string()).default([]),
-    bio: z.string(),
     about: z.string(),
     linkedin: z.string().url().optional(),
     github: z.string().url().optional(),

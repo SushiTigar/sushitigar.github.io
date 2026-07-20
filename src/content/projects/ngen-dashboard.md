@@ -1,15 +1,15 @@
 ---
 title: "NGEN Dashboard"
 subtitle: "SharePoint Site"
-description: "Designed a data visualization dashboard for the NGEN platform, providing real-time analytics and reporting capabilities."
+description: "I built a SharePoint dashboard that gives managers a real-time view of project progress and company announcements in one place."
 thumbnail: "/images/pic06.jpg"
 detailImages:
   - "/images/portfolio/e.png"
-contributions: "I was given a wireframe from a Graphic Designer and I translated it into a SharePoint website. I utilized JavaScript to pull the data from the Web Parts. I then used CSS to make them match the wireframe. Finally, I wrote a guide for end-users to be able to update every component using SharePoint's backend services."
+contributions: "I turned a graphic designer's wireframe into a working SharePoint site so managers could track project progress at a glance. I used JavaScript to pull live data from the Web Parts and styled everything with CSS to match the original design. To make the site easy to maintain, I wrote an end-user guide that explains how to update each component through SharePoint's backend."
 tools: "Notepad++ was my Text Editor and Microsoft SharePoint was the corporate platform that I worked with to create the site."
 tags: ["UX Design", "Dashboard", "Data Visualization"]
 order: 6
 published: true
 ---
 
-This website serves as a dashboard for managers to track the progress of various projects at a glance as well as give announcements. The site was required to integrate with other corporate SharePoint sites and was requested to be intuitive, feature-rich, and visually engaging.
+I built this site as a dashboard where managers can track the progress of various projects at a glance and post announcements. It had to connect with other corporate SharePoint sites and the client asked for something intuitive, feature-rich, and visually engaging.

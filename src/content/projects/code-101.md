@@ -1,7 +1,7 @@
 ---
 title: "Code 101"
 subtitle: "All-Day Workshop"
-description: "Developed an introductory coding course for non-technical learners, covering fundamental programming concepts through hands-on exercises."
+description: "I developed a full-day introductory coding workshop that gets absolute beginners writing HTML and CSS and deploying their first website."
 thumbnail: "/images/pic04.jpg"
 detailImages:
   - "/images/portfolio/c_printout1.PNG"
@@ -9,11 +9,11 @@ detailImages:
   - "/images/portfolio/c_slide1.PNG"
   - "/images/portfolio/c_slide2.PNG"
   - "/images/portfolio/c_slide3.PNG"
-contributions: "I designed and developed this workshop along with an Instructor. I created an initial outline and received approval from the client. Following that, I developed a comprehensive Facilitator's Guide, template HTML/CSS files, a packet of handout materials, and a set of Google Slides to run through the whole workshop. The instructor helped me with some of the scripting (i.e., what to say) in the slides and Facilitator's Guide."
+contributions: "I designed and developed this workshop with an instructor after the client approved my outline. I built a full facilitator's guide, template HTML and CSS files, a handout packet, and a set of Google Slides to run the day. The instructor and I wrote the speaking script together for the slides and guide."
 tools: "Google Docs and Google Slides were used to produce the written documentation and lecture slides. I used Adobe Illustrator to produce the print handouts and used Atom as my Text Editor to code the templates, which I then stored on GitHub."
 tags: ["eLearning", "Development", "Instructional Design"]
 order: 5
 published: true
 ---
 
-This workshop is an introduction to the coding industry for learners with no prior experience. It has been successfully run dozens of times in Seattle, Portland, and NYC with student cohorts as large as 50. It has learners writing HTML and CSS, pair programming, working in teams, and deploying websites on GitHub. It also features lectures about what it's like to work in the industry as a professional. Finally, it serves as a micro-version of a Coding Bootcamp course, so that learners can decide if they want to take more courses and ultimately become web developers.
+I designed this workshop as a gentle entry into the coding industry for people with no prior experience. It has run dozens of times in Seattle, Portland, and New York with cohorts as large as 50. Learners write HTML and CSS, pair program, work in teams, and deploy sites on GitHub, and learn what it's like to work as a professional developer. It works as a small taste of a coding bootcamp so learners can decide whether to keep going.
